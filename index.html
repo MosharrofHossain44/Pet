@@ -8,6 +8,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gridGap {
+            display: grid;
+            column-gap: 15px;
+            row-gap: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,26 +31,29 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <div>
-                <img class="w-[30px] h-[30px]" src="https://img.icons8.com/parakeet-line/40/test-account.png" alt="User">
+                <img class="w-[30px] h-[30px]" src="https://img.icons8.com/parakeet-line/40/test-account.png"
+                    alt="User">
             </div>
         </nav>
 
-        
+
         <!-- header bg  -->
-         <div>
+        <div>
             <!-- header content  -->
-             <div class="text-center my-2">
+            <div class="text-center my-2">
                 <h4 class="font-bold text-2xl text-gray-500 ">Bringing Families Together ❤️‍🔥</h4>
                 <h1 class="font-bold text-7xl pt-10 pb-6">Your Path to Adoption<br>Starts Here</h1>
-                <p class="text-[16px]">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br>at its layout. The point of using Lorem Ipsum is that it has a.</p>
-             </div>
+                <p class="text-[16px]">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking <br>at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+            </div>
 
 
-             <!-- header img  -->
-              <div class="flex justify-center ">
+            <!-- header img  -->
+            <div class="flex justify-center ">
                 <img class="my-2" src="images/pet.webp" alt="Pet images">
-              </div>
-         </div>
+            </div>
+        </div>
     </header>
 
 
@@ -52,29 +62,53 @@
 
     <main class="w-11/12 border my-4 mx-auto">
         <!-- Adopt content  -->
-         <div class="text-center border border-black my-2">
-            <h1 class="font-bold text-4xl mb-6">Adopt  Your  Best Friend</h1>
-            <p class="text-[16px] text-gray-500">It is a long established fact that a reader will be distracted by the readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
-         </div>
+        <div class="text-center border border-black my-2">
+            <h1 class="font-bold text-4xl mb-6">Adopt Your Best Friend</h1>
+            <p class="text-[16px] text-gray-500">It is a long established fact that a reader will be distracted by the
+                readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it
+                has a.</p>
+        </div>
 
 
 
 
-         <!-- adopt img card  -->
-          <div class="flex my-5 mx-auto border border-black">
+
+
+
+        <!-- adopt img card  -->
+        <div class="flex my-5 mx-auto border border-black">
 
             <!-- here show main adopt image  -->
-            <div id="card_container" class="w-3/4 grid lg:grid-cols-4 md:grid-cols-2 border border-red-700">
+            <div id="card_container" class="w-3/4 grid gridGap lg:grid-cols-4 md:grid-cols-2 border border-red-700">
 
             </div>
 
             <!-- here is show image that is liked  -->
-            <div class="w-1/4 border border-green-700">
+            <div id="side_image_container" class="w-1/4 border grid gridGap grid-cols-2  border-green-700">
 
             </div>
-          </div>
+        </div>
 
     </main>
+
+
+    <!-- Modal Content  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-middle">
+        <div class="modal-box">
+            <div id="modal_content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn block">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <button id="test">Test</button>
 
 
 
@@ -83,5 +117,6 @@
 
 
 <script src="js/index.js"></script>
+<script src="js/event.js"></script>
 
 </html>
