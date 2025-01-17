@@ -60,9 +60,9 @@
 
 
 
-    <main class="w-11/12 border my-4 mx-auto">
+    <main class="w-11/12 my-4 mx-auto">
         <!-- Adopt content  -->
-        <div class="text-center border border-black my-2">
+        <div class="text-center  my-2">
             <h1 class="font-bold text-4xl mb-6">Adopt Your Best Friend</h1>
             <p class="text-[16px] text-gray-500">It is a long established fact that a reader will be distracted by the
                 readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -70,21 +70,32 @@
         </div>
 
 
+        <!-- Category section  -->
+        <div class="flex justify-between my-12">
+            <button class=" px-10 flex items-center gap-2 pt-2 pb-4  text-2xl font-bold border border-green-700 rounded-xl"><span class="text-4xl">🐕</span> Dogs </button>
+            <button class=" px-10 flex items-center gap-2 pt-2 pb-4  text-2xl font-bold border-2 border-green-700 bg-[#0E7A811A] rounded-full"><span class="text-4xl">🐱</span> Cats</button>
+            <button class=" px-10 flex items-center gap-2 pt-2 pb-4  text-2xl font-bold border-2 border-green-700 bg-[#0E7A811A] rounded-full"><span class="text-4xl">🐇</span> Rabbits</button>
+            <button class=" px-10 flex items-center gap-2 pt-2 pb-4  text-2xl font-bold border-2 border-green-700 bg-[#0E7A811A] rounded-full"><span class="text-4xl">🐥</span> Bird</button>
+
+        </div>
 
 
 
 
-
+        <div class="flex justify-between items-center">
+            <h1 class="font-bold text-2x">Best Deal For you</h1>
+            <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+        </div>
         <!-- adopt img card  -->
-        <div class="flex my-5 mx-auto border border-black">
+        <div class="flex gap-4 my-5 mx-auto  border-black">
 
             <!-- here show main adopt image  -->
-            <div id="card_container" class="w-3/4 grid gridGap lg:grid-cols-4 md:grid-cols-2 border border-red-700">
+            <div id="card_container" class="w-3/4 grid gap-4 mx-auto p-2 rounded-xl lg:grid-cols-4 md:grid-cols-2 border">
 
             </div>
 
             <!-- here is show image that is liked  -->
-            <div id="side_image_container" class="w-1/4 border grid gridGap grid-cols-2  border-green-700">
+            <div id="side_image_container" class="w-1/4 border grid gap-3 grid-cols-2 rounded-xl">
 
             </div>
         </div>
@@ -103,7 +114,7 @@
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn block">Cancel</button>
+                    <button class="btn block bg-red-500 text-white">Cancel</button>
                 </form>
             </div>
         </div>
