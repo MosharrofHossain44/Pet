@@ -19,8 +19,32 @@ const loadPetDetails = async (petId) => {
 
 //display all pets
 const displayAllPets = (petsArray) => {
-  // console.log(petsArray)
+  // console.log(petsArray, petsArray.length)
+  const cardContainer = document.getElementById('card_container');
 
+  if (petsArray.length == 0) {
+    cardContainer.innerHTML = "";
+    cardContainer.classList.remove('grid', 'grid', 'gap-4', 'lg:grid-cols-4', 'md:grid-cols-2');
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <div class="lg:py-28 md:py-16 flex flex-col justify-center items-center"> 
+         <img class="" src="images/error.webp" alt="No content image">
+         <h1 class="text-3xl font-bold">
+            No Information Available
+         </h1>
+         <p class="text-center">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at <br>
+            its layout. The point of using Lorem Ipsum is that it has a.
+         </p>
+      </div>
+    `
+    cardContainer.appendChild(div);
+    return;
+  };
+
+  cardContainer.classList.add('grid', 'grid', 'gap-4', 'lg:grid-cols-4', 'md:grid-cols-2');
+  cardContainer.innerHTML = "";
 
 
 
@@ -31,7 +55,6 @@ const displayAllPets = (petsArray) => {
     const { date_of_birth, gender, image, pet_name, price, breed, petId } = petData;
 
 
-    const cardContainer = document.getElementById('card_container');
 
     const card = document.createElement('div');
     card.innerHTML = `
